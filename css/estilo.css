@@ -1,4 +1,269 @@
-@font-face{
-    font-family: Montserrat;
-    src: url(.../fonts/Montserrat.woff) format("woff");
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #faf9f6;
+  color: #35443c;
+  font-family: 'Montserrat', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  position: relative;
+  z-index: 10;
+  background: white;
+}
+
+header .container {
+  max-width: 1140px;
+}
+
+.marca {
+  text-align: center;
+  color: #B47C28;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.submarca {
+  text-align: center;
+  font-size: 13px;
+}
+
+.navbar {
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.navbar-nav {
+  margin: auto;
+}
+
+.nav-link {
+  color: #35443c !important;
+  padding: 10px 14px !important;
+}
+
+.nav-link:hover {
+  color: #B47C28 !important;
+}
+
+.hero {
+  background: #BDD8A4;
+  padding: 65px 20px;
+  overflow: hidden;
+}
+
+.hero .container {
+  max-width: 1140px;
+}
+
+.hero .row {
+  min-height: 350px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  margin: 10px 0 20px;
+}
+
+.decorativo {
+  font-family: 'Sacramento', cursive;
+  font-size: 35px;
+  color: #94621e;
+}
+
+.hero-imagem {
+  display: block;
+  position: static;
+  width: 100%;
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: contain;
+  margin: auto;
+}
+
+.section {
+  padding: 60px 20px;
+}
+
+.section .container {
+  max-width: 1140px;
+}
+
+.titulo {
+  text-align: center;
+  color: #536b4c;
+  margin: 0 0 30px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card {
+  height: 100%;
+  background: white;
+  border: 1px solid #e4d9dc;
+  border-radius: 12px;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px #35443c18;
+}
+
+.card h4 {
+  font-size: 1.15rem;
+}
+
+.card p {
+  margin-bottom: 0;
+}
+
+.botao {
+  display: inline-block;
+  background: #B47C28;
+  color: white;
+  border: 0;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.botao:hover {
+  background: #94621e;
+  color: white;
+}
+
+.etica {
+  background: #E4D9DC;
+}
+
+.contato-info {
+  background: #FFD4D4;
+  padding: 25px;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.contato-info a {
+  color: #624a37;
+  overflow-wrap: anywhere;
+}
+
+form {
+  width: 100%;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px 12px;
+  border-radius: 7px;
+}
+
+.verificacao {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  background: white;
+}
+
+.verificacao input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+.verificacao label {
+  margin: 0;
+  cursor: pointer;
+}
+
+.whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px #0002;
+}
+
+footer {
+  background: #35443c;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+  width: 100%;
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .marca {
+    font-size: 26px;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 45px 15px;
+  }
+
+  .hero .row {
+    min-height: auto;
+  }
+
+  .hero-imagem {
+    max-width: 300px;
+    max-height: 300px;
+    margin-top: 20px;
+  }
+
+  .section {
+    padding: 45px 15px;
+  }
+
+  .contato-info {
+    padding: 20px;
+  }
+
+  .whatsapp {
+    right: 12px;
+    bottom: 12px;
+  }
 }
