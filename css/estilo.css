@@ -1,269 +1,701 @@
+
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 150px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 150px;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  background: #faf9f6;
-  color: #35443c;
-  font-family: 'Montserrat', Arial, sans-serif;
-  line-height: 1.6;
+    margin: 0;
+    background: #faf9f6;
+    color: #35443c;
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
+img {
+    max-width: 100%;
+}
+
+/* CABEÇALHO */
+
 header {
-  position: relative;
-  z-index: 10;
-  background: white;
+    position: relative;
+    z-index: 100;
+    background: white;
 }
 
 header .container {
-  max-width: 1140px;
+    max-width: 1140px;
 }
 
 .marca {
-  text-align: center;
-  color: #B47C28;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 4px;
+    text-align: center;
+    color: #B47C28;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 4px;
 }
 
 .submarca {
-  text-align: center;
-  font-size: 13px;
+    text-align: center;
+    font-size: 13px;
 }
 
 .navbar {
-  justify-content: center;
-  padding-bottom: 0;
+    justify-content: center;
+    padding-bottom: 0;
 }
 
 .navbar-nav {
-  margin: auto;
+    margin: auto;
 }
 
 .nav-link {
-  color: #35443c !important;
-  padding: 10px 14px !important;
+    color: #35443c !important;
+    padding: 10px 14px !important;
+    font-weight: 500;
+    transition: color .3s;
 }
 
-.nav-link:hover {
-  color: #B47C28 !important;
+.nav-link:hover,
+.nav-link:focus {
+    color: #B47C28 !important;
 }
+
+.navbar-toggler {
+    border-color: #B47C28;
+    box-shadow: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px #B47C2833 !important;
+}
+
+/* INÍCIO */
 
 .hero {
-  background: #BDD8A4;
-  padding: 65px 20px;
-  overflow: hidden;
+    background: #BDD8A4;
+    padding: 65px 20px;
+    overflow: hidden;
 }
 
 .hero .container {
-  max-width: 1140px;
+    max-width: 1140px;
 }
 
 .hero .row {
-  min-height: 350px;
+    min-height: 350px;
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 700;
-  margin: 10px 0 20px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    margin: 10px 0 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 16px;
 }
 
 .decorativo {
-  font-family: 'Sacramento', cursive;
-  font-size: 35px;
-  color: #94621e;
+    font-family: 'Sacramento', cursive;
+    font-size: 35px;
+    color: #94621e;
 }
 
 .hero-imagem {
-  display: block;
-  position: static;
-  width: 100%;
-  max-width: 400px;
-  max-height: 400px;
-  object-fit: contain;
-  margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: contain;
+    margin: auto;
 }
 
+/* SEÇÕES */
+
 .section {
-  padding: 60px 20px;
+    padding: 60px 20px;
 }
 
 .section .container {
-  max-width: 1140px;
+    max-width: 1140px;
 }
 
 .titulo {
-  text-align: center;
-  color: #536b4c;
-  margin: 0 0 30px;
-  font-size: 2rem;
-  font-weight: 700;
+    text-align: center;
+    color: #536b4c;
+    margin: 0 0 30px;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
+.section h3 {
+    color: #536b4c;
+    font-weight: 600;
+}
+
+/* SERVIÇOS */
+
 .card {
-  height: 100%;
-  background: white;
-  border: 1px solid #e4d9dc;
-  border-radius: 12px;
-  transition: transform .2s, box-shadow .2s;
+    height: 100%;
+    background: white;
+    border: 1px solid #e4d9dc;
+    border-radius: 12px;
+    transition: transform .2s, box-shadow .2s;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px #35443c18;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px #35443c18;
 }
 
 .card h4 {
-  font-size: 1.15rem;
+    font-size: 1.15rem;
+    color: #536b4c;
+    font-weight: 600;
 }
 
 .card p {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
+/* BOTÕES */
+
 .botao {
-  display: inline-block;
-  background: #B47C28;
-  color: white;
-  border: 0;
-  padding: 10px 18px;
-  border-radius: 8px;
-  text-decoration: none;
+    display: inline-block;
+    background: #B47C28;
+    color: white;
+    border: 0;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all .3s ease;
 }
 
 .botao:hover {
-  background: #94621e;
-  color: white;
+    background: #94621e;
+    color: white;
+    transform: translateY(-2px);
 }
+
+/* ÉTICA */
 
 .etica {
-  background: #E4D9DC;
+    background: #E4D9DC;
 }
+
+.etica h4 {
+    font-weight: 700;
+    color: #536b4c;
+}
+
+/* CONTATO */
+
+#contato {
+    padding: 80px 20px;
+    background: #ffffff;
+}
+
+.contato-subtitulo {
+    text-align: center;
+    color: #777;
+    margin: -15px 0 40px;
+    font-size: 15px;
+}
+
+/* CARD FALE CONOSCO */
 
 .contato-info {
-  background: #FFD4D4;
-  padding: 25px;
-  height: 100%;
-  border-radius: 12px;
+    height: 100%;
+    padding: 40px 30px;
+    border-radius: 20px;
+    background: #eef2ec;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
 }
 
-.contato-info a {
-  color: #624a37;
-  overflow-wrap: anywhere;
+.contato-detalhe {
+    color: #82977b;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
 }
 
-form {
-  width: 100%;
+.contato-info h3 {
+    color: #536b4c;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 12px 0;
 }
 
-form label {
-  display: block;
-  margin-bottom: 5px;
+.contato-descricao {
+    color: #777;
+    line-height: 1.7;
+    margin-bottom: 30px;
 }
 
-.form-control {
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 10px 12px;
-  border-radius: 7px;
+/* INFORMAÇÕES DE CONTATO */
+
+.contato-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #ffffff;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #555;
+    transition: .3s;
 }
+
+.contato-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    color: #52694e;
+}
+
+.contato-icone {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5ecdf;
+    color: #637d5c;
+    border-radius: 12px;
+    font-size: 25px;
+}
+
+.contato-item small {
+    display: block;
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.contato-item strong {
+    display: block;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.contato-local {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    color: #687c62;
+    font-size: 14px;
+}
+
+.contato-local span {
+    font-size: 22px;
+}
+
+/* FORMULÁRIO DE CONTATO */
+
+.contato-formulario {
+    height: 100%;
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid #e9ede6;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.contato-formulario h3 {
+    color: #536b4c;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contato-formulario p {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.contato-formulario form {
+    width: 100%;
+}
+
+.contato-formulario label {
+    display: block;
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px 0 8px;
+}
+
+.contato-formulario .form-control {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 13px 15px;
+    border: 1px solid #e2e7df;
+    border-radius: 10px;
+    background: #fafbf9;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 14px;
+}
+
+.contato-formulario .form-control:focus {
+    border-color: #82977b;
+    box-shadow: 0 0 0 3px rgba(130, 151, 123, 0.15);
+    background: #ffffff;
+}
+
+.contato-formulario textarea {
+    resize: vertical;
+}
+
+/* VERIFICAÇÃO */
 
 .verificacao {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: fit-content;
-  max-width: 100%;
-  padding: 12px;
-  margin: 15px 0;
-  border: 1px solid #ddd;
-  border-radius: 7px;
-  background: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    max-width: 100%;
+    padding: 12px;
+    margin: 15px 0 20px;
+    border: 1px solid #e2e7df;
+    border-radius: 10px;
+    background: #fafbf9;
 }
 
 .verificacao input {
-  width: 18px;
-  height: 18px;
-  margin: 0;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #637d5c;
 }
 
 .verificacao label {
-  margin: 0;
-  cursor: pointer;
+    margin: 0;
+    cursor: pointer;
+    font-weight: 400;
 }
+
+/* BOTÃO DO FORMULÁRIO */
+
+.contato-formulario .botao {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    background: #637d5c;
+    color: #ffffff;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.contato-formulario .botao:hover {
+    background: #4e6649;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* WHATSAPP FLUTUANTE */
 
 .whatsapp {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 1000;
-  border-radius: 30px;
-  box-shadow: 0 2px 8px #0002;
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 22px;
+    background: #25D366;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease;
 }
 
+.whatsapp:hover {
+    background: #1ebe5d;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-4px);
+}
+
+.whatsapp svg {
+    width: 28px;
+    height: 28px;
+    fill: #ffffff;
+    flex-shrink: 0;
+}
+
+.whatsapp span {
+    color: #ffffff;
+}
+
+/* RODAPÉ */
+
 footer {
-  background: #35443c;
-  color: white;
-  text-align: center;
-  padding: 30px 15px;
-  width: 100%;
+    background: #35443c;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+    width: 100%;
+}
+
+footer h4 {
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #BDD8A4;
 }
 
 footer nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 footer a {
-  color: white;
-  text-decoration: none;
-  margin: 5px;
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    transition: color .3s;
 }
 
 footer a:hover {
-  text-decoration: underline;
+    color: #BDD8A4;
+    text-decoration: underline;
 }
 
+/* TABLETS */
+
+@media (max-width: 991px) {
+
+    html {
+        scroll-padding-top: 120px;
+    }
+
+    .navbar-nav {
+        padding: 12px 0;
+    }
+
+    .nav-link {
+        padding: 12px !important;
+    }
+
+    .hero {
+        padding: 55px 20px;
+    }
+
+    .hero-imagem {
+        max-width: 350px;
+    }
+}
+
+/* CELULARES */
+
 @media (max-width: 767px) {
-  .marca {
-    font-size: 26px;
-  }
 
-  .hero {
-    text-align: center;
-    padding: 45px 15px;
-  }
+    html {
+        scroll-padding-top: 110px;
+    }
 
-  .hero .row {
-    min-height: auto;
-  }
+    .marca {
+        font-size: 26px;
+    }
 
-  .hero-imagem {
-    max-width: 300px;
-    max-height: 300px;
-    margin-top: 20px;
-  }
+    .submarca {
+        font-size: 12px;
+    }
 
-  .section {
-    padding: 45px 15px;
-  }
+    .hero {
+        text-align: center;
+        padding: 45px 15px;
+    }
 
-  .contato-info {
-    padding: 20px;
-  }
+    .hero .row {
+        min-height: auto;
+    }
 
-  .whatsapp {
-    right: 12px;
-    bottom: 12px;
-  }
+    .hero h1 {
+        font-size: clamp(27px, 7vw, 34px);
+    }
+
+    .hero p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .decorativo {
+        font-size: 29px;
+    }
+
+    .hero-imagem {
+        max-width: 300px;
+        max-height: 300px;
+        margin: 20px auto 0;
+    }
+
+    .section {
+        padding: 45px 15px;
+    }
+
+    .titulo {
+        font-size: 27px;
+        margin-bottom: 25px;
+    }
+
+    .section p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .card {
+        padding: 25px 18px !important;
+        border-radius: 14px;
+    }
+
+    .card h4 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    /* CONTATO NO CELULAR */
+
+    #contato {
+        padding: 55px 15px;
+    }
+
+    .contato-subtitulo {
+        margin: -10px 0 30px;
+        font-size: 14px;
+    }
+
+    .contato-info {
+        padding: 28px 22px;
+    }
+
+    .contato-info h3 {
+        font-size: 26px;
+    }
+
+    .contato-formulario {
+        padding: 28px 22px;
+    }
+
+    .contato-formulario h3 {
+        font-size: 22px;
+    }
+
+    .contato-formulario p {
+        font-size: 13px;
+    }
+
+    .contato-formulario .form-control {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .contato-formulario .botao {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .contato-item strong {
+        font-size: 12px;
+    }
+
+    footer {
+        padding: 30px 15px;
+    }
+
+    footer nav {
+        gap: 8px;
+    }
+
+    footer nav a {
+        font-size: 13px;
+        margin: 3px;
+    }
+
+    .whatsapp {
+        right: 16px;
+        bottom: 18px;
+        width: 58px;
+        height: 58px;
+        padding: 0;
+        border-radius: 50%;
+    }
+
+    .whatsapp span {
+        display: none;
+    }
+
+    .whatsapp svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 380px) {
+
+    .marca {
+        font-size: 24px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+
+    .hero-imagem {
+        max-width: 260px;
+    }
+
+    .card {
+        padding: 20px 15px !important;
+    }
+
+    .contato-info,
+    .contato-formulario {
+        padding: 22px 17px;
+    }
+}
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
 }
